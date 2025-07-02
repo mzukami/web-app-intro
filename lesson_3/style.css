@@ -1,0 +1,60 @@
+/* 全体のスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff8e1; /* 薄い黄色で温かみを演出 */
+    color: #b71c1c; /* 濃い赤でアクセント */
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 見出しのスタイル */
+h1 {
+    font-size: 3rem; /* 大きな文字サイズ */
+    color: #ff6f00; /* 明るいオレンジで目立たせる */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 日付のスタイル */
+#date {
+    font-size: 1.5rem;
+    color: #d84315; /* 赤みのあるオレンジ */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 段落のスタイル */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* 動画のスタイル */
+video {
+    display: block;
+    margin: 20px auto;
+    border: 5px solid #ffcc80; /* 黄色系の枠線 */
+    border-radius: 10px;
+}
+
+/* リストのスタイル */
+ol {
+    font-size: 1.2rem;
+    color: #e65100; /* 濃いオレンジ */
+    margin-left: 40px;
+}
+
+/* リスト項目のスタイル */
+ol li {
+    margin-bottom: 10px;
+}
+
+/* 最後の段落のスタイル */
+#conclusion {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #bf360c; /* 深い赤で締める */
+    text-align: center;
+    margin-top: 30px;
+}

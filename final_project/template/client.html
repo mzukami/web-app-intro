@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>データ管理アプリ</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <title>質問＆回答システム</title>
+  <link rel="stylesheet" href="/style.css" />
 </head>
-
 <body>
-    <h1>データ管理</h1>
+  <header>
+    <h1>質問＆回答システム</h1>
+    <div id="auth-section">
+      <div id="user-info" style="display:none;">
+        ログイン中: <span id="username"></span> | <button id="logout-btn">ログアウト</button>
+        <button id="edit-profile-btn">プロフィール編集</button>
+      </div>
+      <div id="login-form">
+        <input type="text" id="login-username" placeholder="ユーザー名" />
+        <input type="password" id="login-password" placeholder="パスワード" />
+        <button id="login-btn">ログイン</button>
+        <button id="show-register-btn">新規登録</button>
+      </div>
+      <div id="register-form" style="display:none;">
+        <input type="text" id="register-username" placeholder="ユーザー名" />
+        <input type="password" id="register-password" placeholder="パスワード" />
+        <button id="register-btn">登録</button>
+        <button id="cancel-register-btn">キャンセル</button>
+      </div>
+    </div>
+  </header>
 
-    <h2>データ一覧</h2>
-    <ul id="data-list">
-        <!-- データはここに表示されます -->
-    </ul>
+  <section id="profile-edit-section" style="display:none;">
+    <h2>プロフィール編集</h2>
+    <textarea id="profile-text" rows="4" cols="50" placeholder="プロフィールを入力"></textarea><br/>
+    <button id="save-profile-btn">保存</button>
+    <button id="cancel-profile-btn">キャンセル</button>
+  </section>
 
-    <h2>データ追加</h2>
-    <form id="add-data-form">
-        <label for="value1">値1:</label>
-        <input type="text" id="value1" name="value1" required><br>
-        <label for="value2">値2:</label>
-        <input type="text" id="value2" name="value2"><br>
-        <button type="submit">追加</button>
-    </form>
+  <section id="search-section">
+    <input type="text" id="search-input" placeholder="質問や回答を検索" />
+    <button id="search-btn">検索</button>
+  </section>
 
-    <script src="script.js"></script>
+  <section id="questions-section">
+    <h2>質問一覧</h2>
+    <ul id="questions-list"></ul>
+  </section>
+
+  <section id="answer-post-section" style="display:none;">
+    <h2>回答投稿</h2>
+    <select id="answer-question-select"></select><br/>
+    <textarea id="answer-content" rows="4" cols="50" placeholder="回答を入力"></textarea><br/>
+    <button id="post-answer-btn">回答投稿</button>
+  </section>
+
+  <script src="/script.js"></script>
 </body>
-
 </html>

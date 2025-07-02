@@ -60,7 +60,7 @@ def read_data_item(item_id: int):
 
     # TODO: 課題　idに対応するデータを取得するSQLをexecute内に書く
     # テーブル名は data
-    item = conn.execute("", item_id).fetchone()
+    item = conn.execute("SELECT * FROM data WHERE id = ?", (item_id,)).fetchone()
 
     # データベース接続を閉じる (リソースの解放)
     conn.close()
